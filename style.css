@@ -1,0 +1,327 @@
+:root {
+    --white: #ffffff;
+    --light-gray: #f0f0f3;
+    --dark-gray: #2e2e3e;
+    --dark-bg: #1a1a2e;
+    --light-bg: #c9d6ff;
+    --light-shadow: rgba(0, 0, 0, 0.15);
+    --dark-shadow: rgba(255, 255, 255, 0.2);
+    --highlight: #f1c40f;
+    --text-light: #e4e6eb;
+    --text-dark: #333;
+    --neon-blue: #00f3ff;
+    --neon-purple: #bf00ff;
+    --neon-pink: #ff00f7;
+    --neon-glow: rgba(0, 243, 255, 0.3);
+    --light-bg: linear-gradient(135deg, #c9d6ff, #e2e2e2, #f0f0ff);
+    --neon-green: #1f5ada;
+    --neon-orange: #ff6b08;
+    --spooky-purple: #9400ff;
+    --ghost-white: #f8f8ff;
+    --blood-red: #ff0000;
+    --fog-effect: rgba(255, 255, 255, 0.05);
+}
+
+body.bg-gradient.theme-light {
+    background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
+    background-size: 200% 200%;
+    animation: gradientBG 10s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.card,
+.main-card,
+.neumorphic,
+.book-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 15px var(--neon-glow),
+                inset 0 0 15px var(--neon-glow);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card,
+.book-card,
+.main-card{
+    padding: 15px;
+}
+
+.main-card{
+    background-color: rgba(--white), 0.9;
+}
+
+.neumorphic-button,
+.neumorphic-input,
+.book-card {
+    padding: 10px 20px;
+    margin: 15px;
+}
+
+.book-card {
+    margin-bottom: 15px;
+}
+
+.neumorphic-input {
+    border: none;
+    outline: none;
+    padding: 10px;
+}
+
+.neumorphic-input,
+.neumorphic-button {
+    box-shadow: inset 2px 2px 5px var(--dark-shadow),
+    -5px -5px 10px rgba(255, 255, 255, 0.7);
+}
+
+.neumorphic-button:hover,
+.book-card:hover,
+.shadow-neumorphic:hover {
+    box-shadow: inset 2px 2px 5px var(--light-shadow),
+    -3px -3px 7px rgba(255, 255, 255, 0.7);
+    transform: translateY(-2px);
+}
+
+.theme-dark{
+    background: linear-gradient(45deg, #000000, var(--spooky-purple));
+    background-size: 400% 400%;
+    animation: spookyBG 15s ease infinite;
+    color: var(--ghost-white) !important;
+}
+
+@keyframes spookyBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.theme-dark .card,
+.theme-dark .book-card,
+.theme-dark .main-card {
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid var(--neon-green);
+    box-shadow: 0 0 20px var(--neon-green),
+                inset 0 0 15px var(--neon-green);
+    animation: pulseGlow 2s ease-in-out infinite;
+}
+
+.theme-dark .neumorphic-button {
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid var(--blood-red);
+    box-shadow: 0 0 15px var(--blood-red),
+                inset 0 0 10px var(--blood-red);
+    color: var(--blood-red);
+    text-shadow: 0 0 8px var(--blood-red);
+}
+
+.theme-dark .neumorphic-button:hover {
+    box-shadow: 0 0 20px var(--neon-purple),
+                inset 0 0 10px var(--neon-purple);
+    transform: translateY(-3px);
+    text-shadow: 0 0 8px var(--neon-purple);
+}
+
+.theme-dark .neumorphic-input {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--neon-blue);
+    box-shadow: 0 0 10px var(--neon-blue),
+                inset 0 0 5px var(--neon-blue);
+    color: var(--text-light);
+}
+
+.theme-dark .btn-toggle {
+    border: 1px solid var(--neon-pink);
+    box-shadow: 0 0 10px var(--neon-pink),
+                inset 0 0 5px var(--neon-pink);
+    color: var(--neon-pink);
+}
+
+.theme-dark .text-highlight {
+    color: var(--neon-blue);
+    text-shadow: 0 0 5px var(--neon-blue);
+}
+
+.theme-light .bi-sun-fill{
+    display: none;
+}
+
+.theme-light .btn-toggle{
+    border: 1px solid var(--neon-purple);
+    box-shadow: 0 0 10px var(--neon-purple),
+                inset 0 0 5px var(--neon-purple);
+    color: var(--neon-purple);
+    transition: all 0.3s ease-in-out;
+}
+
+.swal2-popup{
+    font-family: 1.1rem;
+    border-radius: 12px;
+}
+
+
+* {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.neumorphic-button {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--neon-blue);
+    box-shadow: 0 0 10px var(--neon-blue),
+                inset 0 0 5px var(--neon-blue);
+    text-shadow: 0 0 5px var(--neon-blue);
+    transition: all 0.3s ease;
+}
+
+.neumorphic-button:hover {
+    box-shadow: 0 0 20px var(--neon-blue),
+                inset 0 0 10px var(--neon-blue);
+    transform: translateY(-3px);
+    text-shadow: 0 0 8px var(--neon-blue);
+}
+
+.theme-light .neumorphic-input {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--neon-pink);
+    box-shadow: 0 0 10px var(--neon-pink),
+                inset 0 0 5px var(--neon-pink);
+}
+
+.theme-light {
+    background: linear-gradient(45deg, var(--ghost-white), var(--neon-orange));
+    background-size: 400% 400%;
+    animation: spookyBG 15s ease infinite;
+}
+
+.theme-light .card,
+.theme-light .main-card,
+.theme-light .book-card {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--neon-orange);
+    box-shadow: 0 0 20px var(--neon-orange),
+                inset 0 0 15px var(--neon-orange);
+    color: var(--dark-gray);
+    text-shadow: 0 0 8px var(--neon-orange);
+    animation: pulseGlow 2s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+    0% { filter: brightness(1); }
+    50% { filter: brightness(1.3); }
+    100% { filter: brightness(1); }
+}
+
+.neumorphic-button:hover,
+.book-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    filter: brightness(1.2);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.theme-dark::before,
+.theme-light::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--fog-effect);
+    pointer-events: none;
+    animation: fogMove 20s infinite alternate;
+}
+
+@keyframes fogMove {
+    0% { transform: translateX(-10%) translateY(-10%); }
+    100% { transform: translateX(10%) translateY(10%); }
+}
+
+@keyframes floatingIcons {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(180deg);
+    }
+    100% {
+        transform: translateY(0) rotate(360deg);
+    }
+}
+
+.floating-icon {
+    position: fixed;
+    pointer-events: none;
+    z-index: 1000;
+    opacity: 0.6;
+    animation: floatingIcons 3s ease-in-out infinite;
+}
+
+.floating-icon:nth-child(1) {
+    top: 10%;
+    left: 10%;
+    font-size: 1.5rem;
+    color: var(--neon-blue);
+    animation-delay: 0s;
+}
+
+.floating-icon:nth-child(2) {
+    top: 20%;
+    right: 20%;
+    font-size: 2rem;
+    color: var(--neon-purple);
+    animation-delay: 0.5s;
+}
+
+.floating-icon:nth-child(3) {
+    bottom: 15%;
+    left: 30%;
+    font-size: 1.8rem;
+    color: var(--neon-pink);
+    animation-delay: 1s;
+}
+
+.floating-icon:nth-child(4) {
+    bottom: 25%;
+    right: 15%;
+    font-size: 1.6rem;
+    color: var(--neon-green);
+    animation-delay: 1.5s;
+}
+
+.theme-dark .floating-icon {
+    text-shadow: 0 0 10px currentColor;
+}
+
+.theme-light .floating-icon {
+    opacity: 0.4;
+}
+
+.theme-dark {
+    color: var(--ghost-white);
+}
+
+.theme-dark * {
+    color: var(--ghost-white) !important;
+}
+
+.theme-dark input,
+.theme-dark select,
+.theme-dark textarea {
+    color: var(--text-dark) !important; /* Set the text color to a dark color */
+    background-color: var(--white) !important; /* Set the background color to white */
+    border-color: var(--text-dark); /* Optional: to ensure the border is visible */
+}
+
+.theme-dark select,
+.theme-dark option {
+    color: var(--text-dark) !important; /* Set the text color to a dark color */
+    background-color: var(--white) !important; /* Set the background color to white */
+}
+
+.theme-dark .edit-btn {
+    color: var(--text-dark) !important; /* Set the text color to a dark color */ /* Optional: to ensure contrast */
+}
